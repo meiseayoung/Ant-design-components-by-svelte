@@ -10,8 +10,6 @@
     export default {
         oncreate(){
            this.refs.checkbox.addEventListener("click",event=>{
-            // let disabled = this.get("disabled");    
-            // let checked = this.get("checked");
                 const { disabled,checked } = this.get();
                 if(disabled){
                     return;
