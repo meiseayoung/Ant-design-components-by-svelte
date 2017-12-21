@@ -1,0 +1,39 @@
+﻿<span class="ant-switch {{disabledClass}} {{checkeStatus}}" tabindex="0" ref:switch>
+    <span class="ant-switch-inner">{{checkedText}}</span>
+</span>
+<script>
+    export default {
+        oncreate(){
+            this.refs.switch.addEventListener("click",event=>{
+                if(this.get("disabled")){
+                    return;
+                }
+                let checked = this.get("checked");
+                this.set({
+                    checked:!checked
+                });
+            })
+        },
+        data(){
+            return {
+                disabled:false,
+                checked:true,
+                customText:{
+                    on:'开',
+                    off:'关'
+                }
+            }
+        },
+        computed:{
+            checkeStatus:checked=>{
+                return checked === true ? 'ant-switch-checked' : '';
+            },
+            checkedText:(checked,customText)=>{
+                return checked === true ? customText.on : customText.off;
+            },
+            disabledClass:disabled=>{
+                return disabled === true ? 'ant-switch-disabled' : '';
+            }
+        }
+    }
+</script>  

@@ -1,0 +1,40 @@
+<label class="ant-checkbox-wrapper">
+    <span class="ant-checkbox {{checkedClass}} {{disabledClass}}" ref:checkbox>
+        <input type="checkbox" class="ant-checkbox-input" value="on">
+        <span class="ant-checkbox-inner"></span>
+    </span>
+    <span>{{label}}</span>
+</label>
+
+<script>
+    export default {
+        oncreate(){
+           this.refs.checkbox.addEventListener("click",event=>{
+            // let disabled = this.get("disabled");    
+            // let checked = this.get("checked");
+                const { disabled,checked } = this.get();
+                if(disabled){
+                    return;
+                }
+                this.set({
+                    checked:!checked
+                });
+           });
+        },
+        data(){
+            return {
+                label:"checkbox",
+                checked:true,
+                disabled:false
+            }
+        },
+        computed:{
+            checkedClass:checked=>{
+                return checked === true ? 'ant-checkbox-checked' : "";
+            },
+            disabledClass:disabled=>{
+                return disabled === true ? 'ant-checkbox-disabled' : "";
+            }
+        }
+    }
+</script>  

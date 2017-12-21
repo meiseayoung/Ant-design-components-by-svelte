@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Antd Button Component</title>
+    <link rel="stylesheet" href="./antd.css">
+    <script src="./Icon.js"></script>
+</head>
+<body>
+    <div style="margin:10px 0;">
+        <div id="button-default" style="display:inline-block;margin:0 20px;">
+                    
+        </div>
+        <div id="button-primary" style="display:inline-block;margin:0 20px;">
+    
+        </div>
+        <div id="button-dashed" style="display:inline-block;margin:0 20px;">
+    
+        </div>
+        <div id="button-danger" style="display:inline-block;margin:0 20px;">
+    
+        </div>
+    </div>
+   
+    <script>
+         var button_default = new Icon({
+            target:document.getElementById("button-default"),
+            data:{
+                type:"step-backward",
+            }
+        });
+        var button_primary = new Icon({
+            target:document.getElementById("button-primary"),
+            data:{
+                type:"step-forward",
+            }
+        });
+        var button_dashed = new Icon({
+            target:document.getElementById("button-dashed"),
+            data:{
+                 type:"fast-backward",
+            }
+        });
+        var button_danger = new Icon({
+            target:document.getElementById("button-danger"),
+            data:{
+                type:"fast-forward",
+            }
+        });
+    </script> 
+</body>
+</html>

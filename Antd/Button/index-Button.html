@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Antd Button Component</title>
+    <link rel="stylesheet" href="./antd.css">
+    <script src="./Button.js"></script>
+</head>
+<body>
+    <div style="margin:10px 0;">
+        <div id="button-default" style="display:inline-block;margin:0 20px;">
+                    
+        </div>
+        <div id="button-primary" style="display:inline-block;margin:0 20px;">
+    
+        </div>
+        <div id="button-dashed" style="display:inline-block;margin:0 20px;">
+    
+        </div>
+        <div id="button-danger" style="display:inline-block;margin:0 20px;">
+    
+        </div>
+    </div>
+   
+    <script>
+         var button_default = new Button({
+            target:document.getElementById("button-default"),
+            data:{
+                type:"default",
+                value:"default",
+                icon:"search"
+            }
+        });
+        var button_primary = new Button({
+            target:document.getElementById("button-primary"),
+            data:{
+                type:"primary",
+                value:"primary",
+                icon:"search"
+            }
+        });
+        var button_dashed = new Button({
+            target:document.getElementById("button-dashed"),
+            data:{
+                 type:"dashed",
+                 value:"dashed",
+                 icon:"search",
+                 disabled:false
+            }
+        });
+        var button_danger = new Button({
+            target:document.getElementById("button-danger"),
+            data:{
+                type:"danger",
+                value:"danger",
+                icon:"",
+            }
+        });
+    </script> 
+</body>
+</html>

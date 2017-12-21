@@ -1,0 +1,20 @@
+
+<button type="button" disabled={{disabled}} class="ant-btn ant-btn-{{type}} ant-btn-icon-only">
+    <i class="anticon anticon-{{icon}}"></i>
+    {{value}}
+</button>
+
+
+<script>
+    export default {
+        data(){
+            return {
+                value:"default",
+                type:"default",
+                shape:"circle",
+                icon:"",
+                disabled:false
+            }
+        }
+    }
+</script>  

@@ -1,0 +1,35 @@
+<div class="ant-breadcrumb" ref:breadcrumb>
+    {{#each list as item}}
+    <span>
+        <a class="ant-breadcrumb-{{item.icon}}" href="">
+            <i class="anticon anticon-{{item.icon}}"></i>
+            <span>{{item.text}}</span>
+        </a>
+        <span class="ant-breadcrumb-separator">/</span>
+    </span>
+   {{/each}}
+</div>
+<script>
+    export default {
+        oncreate(){
+            this.refs.breadcrumb.addEventListener("click",function(event){
+                console.log(event);
+                event.preventDefault();
+            });
+        },
+        data(){
+            return {
+                list:[{
+                    text:"",
+                    icon:"home"
+                },{
+                    text:"Application List",
+                    icon:"user"
+                },{
+                    text:"Application",
+                    icon:""
+                }]
+            }
+        }
+    }
+</script>  

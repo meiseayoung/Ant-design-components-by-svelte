@@ -1,0 +1,33 @@
+<span class="ant-switch ant-switch-checked" tabindex="0"><span class="ant-switch-inner">开</span></span>
+
+<script>
+    export default {
+        oncreate(){
+            
+        },
+        data(){
+            return {
+                position:{
+                    left:0,
+                    top:0
+                },
+                visible:true,
+                list:[{
+                    text:"home",
+                    icon:"home"
+                },{
+                    text:"Application List",
+                    icon:"user"
+                },{
+                    text:"Application",
+                    icon:""
+                }]
+            }
+        },
+        computed:{
+            hidden:visible=>{
+                return visible !== true ? 'ant-dropdown-hidden' : ''
+            }
+        }
+    }
+</script>  
