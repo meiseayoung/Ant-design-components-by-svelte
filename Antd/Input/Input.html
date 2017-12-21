@@ -1,0 +1,39 @@
+<span class="ant-input-group-wrapper">
+    <span class="ant-input-wrapper ant-input-group">
+        <span class="ant-input-group-addon">{{addonBefore}}</span>
+        <input type="text" class="ant-input {{inputSize}}" value="{{value}}">
+        <span class="ant-input-group-addon">{{addonAfter}}</span>
+    </span>
+</span>
+
+<script>
+    export default {
+        data(){
+            return {
+                value:"please input",   //输入框值
+                addonBefore:"https://", //前缀
+                addonAfter:".com",      //后缀
+                size:"default"          //输入框尺寸 "large","small","default"
+            }
+        },
+        computed:{
+            inputSize:size=>{
+                let inputSize;
+                switch(size){
+                    case "large" :
+                        inputSize = "ant-input-lg";
+                        break;
+                    case "small" :
+                        inputSize = "ant-input-sm";
+                        break;
+                    case "default" : 
+                        inputSize = "";
+                        break;
+                    default :
+                        inputSize = "";
+                }
+                return inputSize;
+            }
+        }
+    }
+</script>  
